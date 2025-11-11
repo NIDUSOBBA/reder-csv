@@ -20,7 +20,7 @@ public class Main {
             ReadResult<ProductLine> read = csvProductReader.read(readable);
             BillResult<BillLine> calculate = billCalculator.calculate(read.getItems());
             String writable = scanner.nextLine();
-            System.out.println("The csv file written as ");
+            System.out.println("The csv file written as");
             csvBillWriter.write(writable, calculate.getItems(), calculate.getTotal(), read.getErrorCount());
         }
     }
